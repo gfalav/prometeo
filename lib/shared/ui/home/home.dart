@@ -6,6 +6,11 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return QubitScaffold();
+    return QubitScaffold(
+      appBarTitle: "Home",
+      appBarIcon: Icons.home.codePoint,
+      showActions: true,
+      showDrawer: true,
+    );
   }
 }

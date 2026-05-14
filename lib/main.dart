@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:prometeo/shared/ui/frame/theme/util.dart';
 import 'package:prometeo/shared/ui/frame/theme/theme.dart';
 import 'package:prometeo/shared/ui/home/home.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
     TextTheme textTheme = createTextTheme(context, "Manrope", "Manrope");
 
     MaterialTheme theme = MaterialTheme(textTheme);
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Prometeo',
       debugShowCheckedModeBanner: false,
       theme: brightness == Brightness.light ? theme.light() : theme.dark(),
