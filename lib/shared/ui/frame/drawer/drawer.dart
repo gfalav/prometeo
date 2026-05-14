@@ -6,6 +6,9 @@ class QubitDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(child: LeftMenu());
+    return Drawer(
+      backgroundColor: Theme.of(context).colorScheme.surfaceContainer,
+      child: LeftMenu(),
+    );
   }
 }

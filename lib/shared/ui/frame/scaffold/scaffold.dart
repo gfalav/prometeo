@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:prometeo/shared/controllers/appcontroller.dart';
 import 'package:prometeo/shared/ui/frame/appbar/appbar.dart';
+import 'package:prometeo/shared/ui/frame/body/body.dart';
 import 'package:prometeo/shared/ui/frame/drawer/drawer.dart';
 
 class QubitScaffold extends StatelessWidget {
@@ -37,10 +38,7 @@ class QubitScaffold extends StatelessWidget {
         drawer: appController.devType.value == "Mobile" && showDrawer
             ? const QubitDrawer()
             : null,
-        body: Container(
-          color: Theme.of(context).colorScheme.surfaceContainer,
-          child: Center(child: Text(appController.screenWidth.toString())),
-        ),
+        body: QubitBody(),
       ),
     );
   }
