@@ -4,7 +4,8 @@ import 'package:prometeo/shared/controllers/appcontroller.dart';
 import 'package:prometeo/shared/ui/frame/leftmenu/leftmenu.dart';
 
 class QubitBody extends StatelessWidget {
-  const QubitBody({super.key});
+  final Widget body;
+  const QubitBody({super.key, required this.body});
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +24,23 @@ class QubitBody extends StatelessWidget {
                   child: LeftMenu(),
                 ),
               ),
-              Expanded(child: Container(color: Colors.green)),
-              Container(color: Colors.blue, width: 100),
+              Expanded(
+                child: Container(
+                  color: Theme.of(context).colorScheme.surface,
+                  child: body,
+                ),
+              ),
+              Visibility(
+                visible: appController.devType.value == "Desktop",
+                child: Container(
+                  color: Theme.of(context).colorScheme.surfaceContainerHighest,
+                  width: 200,
+                ),
+              ),
             ],
           ),
         ),
-        Container(color: Colors.yellow, height: 48),
+        Container(color: Theme.of(context).colorScheme.tertiary, height: 48),
       ],
     );
   }

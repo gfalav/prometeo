@@ -10,6 +10,7 @@ class QubitScaffold extends StatelessWidget {
   final int appBarIcon;
   final bool showActions;
   final bool showDrawer;
+  final Widget body;
 
   const QubitScaffold({
     super.key,
@@ -17,6 +18,7 @@ class QubitScaffold extends StatelessWidget {
     required this.appBarIcon,
     required this.showActions,
     required this.showDrawer,
+    required this.body,
   });
 
   @override
@@ -38,7 +40,7 @@ class QubitScaffold extends StatelessWidget {
         drawer: appController.devType.value == "Mobile" && showDrawer
             ? const QubitDrawer()
             : null,
-        body: QubitBody(),
+        body: QubitBody(body: body),
       ),
     );
   }

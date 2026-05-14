@@ -11,6 +11,7 @@ class Home extends StatelessWidget {
       appBarIcon: Icons.home.codePoint,
       showActions: true,
       showDrawer: true,
+      body: SizedBox(child: const Center(child: Text("Home"))),
     );
   }
 }
