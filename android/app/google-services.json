@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1074324118915",
+    "project_id": "prometeo-520a2",
+    "storage_bucket": "prometeo-520a2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074324118915:android:46014408c4f5436191eab6",
+        "android_client_info": {
+          "package_name": "com.example.prometeo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvLpGesEXnc2am2dcctbGK53H7LNTsP7s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
